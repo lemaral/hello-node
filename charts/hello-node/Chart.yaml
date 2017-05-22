@@ -1,0 +1,14 @@
+name: hello-node
+description: Helm sample
+version: 0.1.0
+keywords:
+  - http
+  - node
+  - www
+  - web
+home: "https://github.com/lemaral/hello-node"
+sources:
+  - "https://github.com/lemaral/hello-node"
+maintainers:
+  - name: lemaral
+    email: lemaral@sample.com
