@@ -1,5 +1,3 @@
-# The pod name
-Name: hello-node-helm
 image: "930379479477.dkr.ecr.eu-west-1.amazonaws.com/hello-node"
 imageTag: "latest"
 imagePullPolicy: "Always"
