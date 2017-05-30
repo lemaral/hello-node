@@ -1,5 +1,0 @@
-image: "930379479477.dkr.ecr.eu-west-1.amazonaws.com/hello-node"
-imageTag: "latest"
-imagePullPolicy: "Always"
-cpu: "10m"
-memory: "128Mi"
