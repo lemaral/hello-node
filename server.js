@@ -1,9 +1,16 @@
 var http = require('http');
 
-var handleRequest = function(request, response) {
+http.createServer(on8080).listen(8080);
+http.createServer(on8081).listen(8081);
+
+function on8080(request, response) {
   console.log('Received request for URL: ' + request.url);
   response.writeHead(200);
-  response.end('Hello, Node! v0.4.1');
+  response.end('8080: Hello, Node! v0.4.2');
 };
-var www = http.createServer(handleRequest);
-www.listen(8080);
+
+function on8081(request, response) {
+  console.log('Received request for URL: ' + request.url);
+  response.writeHead(200);
+  response.end('8081: Hello, Node! v0.4.2');
+};
