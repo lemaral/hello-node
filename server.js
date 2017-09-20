@@ -1,16 +1,11 @@
 var http = require('http');
 
-http.createServer(on8080).listen(8080);
-http.createServer(on8081).listen(8081);
+http.createServer().listen(8081).on('request', onRequest);
+http.createServer().listen(8080).on('request', onRequest);
 
-function on8080(request, response) {
-  console.log('8080: Received request for URL: ' + request.url);
+function onRequest(request, response) {
+  var received = 'v0.7: Received request on port ' + this.address().port;
+  console.log(received + ' for URL: ' + request.url);
   response.writeHead(200);
-  response.end('8080: Hello, Node! v0.4.3');
-}
-
-function on8081(request, response) {
-  console.log('8081: Received request for URL: ' + request.url);
-  response.writeHead(200);
-  response.end('8081: Hello, Node! v0.4.3');
+  response.end(received);
 }

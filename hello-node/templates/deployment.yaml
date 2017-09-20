@@ -24,11 +24,11 @@ spec:
         - containerPort: {{ .Values.service.internalHealthPort }}
         livenessProbe:
           httpGet:
-            path: /
+            path: /alive
             port: {{ .Values.service.internalHealthPort }}
         readinessProbe:
           httpGet:
-            path: /
+            path: /ready
             port: {{ .Values.service.internalHealthPort }}
         resources:
 {{ toYaml .Values.resources | indent 12 }}
